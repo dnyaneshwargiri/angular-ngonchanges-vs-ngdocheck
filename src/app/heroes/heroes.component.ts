@@ -16,10 +16,11 @@ export class HeroesComponent implements OnInit {
 
   constructor(private ref: ChangeDetectorRef) {
     console.log(`constructor invoked data is ${this.newHero}`);
-    ref.detach();
-    setInterval(() => {
-      this.ref.detectChanges();
-    }, 5000);
+    //code for custom change detection strategy
+    // ref.detach();
+    // setInterval(() => {
+    //   this.ref.detectChanges();
+    // }, 5000);
   }
 
   ngOnChanges(changes: SimpleChanges) {
